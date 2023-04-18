@@ -1,0 +1,322 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Work+Sans:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap");
+
+/* COLOURS
+Light brown (BG): #f4f1ec
+Black (headings): #000000
+Dark grey (text and social hover): #454959
+Orangey brown (accent): #faeae1
+Darker brown (button): #ded8c8 */
+
+/* FONTS
+Title and Headings - font-family: "Merriweather", serif
+Body text - font-family: "Work Sans", sans-serif */
+
+/* Ensuring no default padding exists */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* Stopping side scroll */
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* Making images responsive */
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* Making sections responsive */
+header {
+  width: 100%;
+  height: auto;
+}
+
+footer {
+  width: 100%;
+  height: auto;
+}
+
+/* Centering nav buttons */
+nav {
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Styling nav (removing list and adding color) */
+nav li {
+  list-style: none;
+}
+
+nav a {
+  color: #000000;
+}
+
+/* Styling nav buttons */
+.button {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 700;
+  transition-duration: 0.4s;
+  font-size: 20px;
+  padding: 14px 40px;
+  background-color: #ded8c8;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: #faeae1;
+  color: #000000;
+}
+
+/* Styling masthead */
+header {
+  grid-area: "masthead";
+  font-family: "Work Sans", sans-serif;
+  font-weight: 900;
+}
+
+/* Styling main content */
+main {
+  grid-area: "main";
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  padding: 3rem;
+}
+
+/* Styling footer */
+footer {
+  grid-area: "footer";
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  padding-top: 2rem;
+}
+
+#card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  background-color: #ffffff;
+}
+
+/* On mouse-over, add a deeper shadow */
+#card:hover {
+  box-shadow: 0 12px 18px 0 rgba(0, 0, 0, 0.2);
+}
+
+#slogan {
+  text-align: center;
+}
+
+/* Styling social media icons */
+#socials {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: inherit;
+  padding-bottom: 2rem;
+}
+
+#socials a {
+  color: #454959;
+}
+
+#socials a:hover {
+  color: #faeae1;
+}
+
+/* Styling company info in footer */
+#comp-info {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 3rem;
+}
+
+/* Adding body BG colour */
+body {
+  background-color: #f4f1ec;
+}
+
+/* Styling body text */
+p {
+  color: #454959;
+  font-family: "Work Sans", sans-serif;
+}
+
+/* Styling headings */
+h1 {
+  font-family: "Merriweather", serif;
+  font-weight: 900;
+}
+
+h2 {
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+}
+
+/* Styling footer */
+footer {
+  color: #454959;
+  font-family: "Work Sans", sans-serif;
+  background-color: #ded8c8;
+}
+
+/* Styling image captions */
+figcaption {
+  color: #454959;
+  font-family: "Work Sans", sans-serif;
+  padding-bottom: 2rem;
+}
+
+/* Styling wrapper articles div */
+#wrapper-articles figcaption {
+  font-size: 0.75rem;
+}
+
+.wrapper-articles {
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Adding padding to articles */
+.article-content {
+  padding-bottom: 2rem;
+}
+
+/* Aligning article text */
+#article1 p {
+  text-align: left;
+}
+
+#article2 p {
+  text-align: left;
+}
+
+#article3 p {
+  text-align: left;
+}
+
+/* Styling logo */
+.logo {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  padding-top: 2rem;
+}
+
+/* Styling masthead (adding BG) */
+#masthead {
+  background-image: url("../img/money-header.jpg");
+  background-size: cover;
+  background-position: 80% 60%;
+  position: relative;
+}
+
+#portfolio {
+  text-align: center;
+}
+
+/* Styling references */
+.ref {
+  padding-bottom: 2rem;
+}
+
+/* MEDIA QUERIES */
+/* I changed font sizes to 0.75rem for mobile, 1rem for tablet and 1.25rem for desktop. For some elements, I added a custom font size if they looked weird. Line height was set to 1.5. */
+@media only screen and (max-width: 35rem) {
+  .logo i {
+    font-size: 1.5rem;
+  }
+
+  #comp-info {
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  /* Making nav stack at small viewport */
+  #nav-flex {
+    display: flex;
+    flex-flow: column;
+  }
+}
+@media only screen and (min-width: 35rem) {
+  /* The 2 column grid cuts off text */
+  /* .wrapper-articles {
+    text-align: center;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  #article1 img {
+    text-align: left;
+    grid-column: 1;
+    grid-row: 1;
+  }
+  #article1 p {
+    text-align: left;
+    grid-column: 1;
+    grid-row: 2;
+  } */
+
+  #portfolio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 3rem;
+    column-gap: 3rem;
+  }
+
+  #socials {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  body {
+    line-height: 1.5;
+  }
+}
+
+@media only screen and (min-width: 80rem) {
+  .wrapper-articles {
+    text-align: center;
+    padding: 2rem;
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  #article1 img {
+    text-align: left;
+    grid-column: 1;
+    grid-row: 1;
+  }
+  #article1 p {
+    text-align: left;
+    grid-column: 1;
+    grid-row: 2;
+  }
+  #portfolio {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  p {
+    font-size: 1.25rem;
+  }
+}

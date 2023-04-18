@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Linking styles -->
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Hot Content</title>
+  </head>
+  <body>
+    <header>
+      <!-- Creating a div for masthead in header -->
+      <div id="masthead">
+        <span class="logo"
+          ><i class="fa-solid fa-fax fa-3x"></i>
+          <h1>TheMoreYouKnowInfo.org</h1></span
+        >
+        <!-- Adding slogan as h1 with id -->
+        <h1 id="slogan">
+          <span>Everyday we learn something new.</span>
+        </h1>
+        <!-- Giving nav a class so I can style it -->
+        <nav class="controls">
+          <div id="nav-flex">
+            <ul>
+              <button class="button">
+                <li><a href="./partials/home.html">Home</a></li>
+              </button>
+              <button class="button">
+                <li><a href="./partials/portfolio.html">Portfolio</a></li>
+              </button>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <!-- Container (div) placed here to dynamically load content -->
+      <div class="main-cont"></div>
+    </main>
+    <footer>
+      <!-- Footer socials here -->
+      <ul id="socials">
+        <li>
+          <a href="https://instagram.com"
+            ><span><i class="fa-brands fa-instagram fa-2x"></i></span
+          ></a>
+        </li>
+        <li>
+          <a href="https://twitter.com"
+            ><span><i class="fa-brands fa-twitter fa-2x"></i></span
+          ></a>
+        </li>
+        <li>
+          <a href="https://linkedin.com"
+            ><span><i class="fa-brands fa-linkedin fa-2x"></i></span
+          ></a>
+        </li>
+        <li>
+          <a href="https://facebook.com"
+            ><span><i class="fa-brands fa-facebook fa-2x"></i></span
+          ></a>
+        </li>
+      </ul>
+      <!-- Footer company info is here -->
+      <ul id="comp-info">
+        <li>TheMoreYouKnowInfo.org</li>
+        <li>1385 Woodroffe Ave</li>
+        <li>613-555-0128</li>
+      </ul>
+    </footer>
+    <!-- Scripts -->
+    <script src="./js/index.js"></script>
+    <script
+      src="https://kit.fontawesome.com/22ff18bc21.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
